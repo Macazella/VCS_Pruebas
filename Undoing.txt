@@ -12,3 +12,77 @@ git status
 git status
 
 git commit -m "it should be os.path.exists"
+
+Restaurar Archivos
+Si has modificado un archivo y quieres revertir los cambios que aún no has añadido al área de staging, puedes usar git checkout:
+
+bash
+Copiar código
+git checkout -- nombre_del_archivo
+Esto restaurará nombre_del_archivo al estado en el que estaba en el último commit.
+
+Cambiar a un Commit Específico
+Puedes usar git checkout para cambiar el estado del directorio de trabajo a un commit específico:
+
+bash
+Copiar código
+git checkout <commit_hash>
+Esto es útil para inspeccionar el estado del proyecto en un punto específico en el tiempo.
+
+Ejemplos Adicionales
+Cambiar a la rama master:
+
+bash
+Copiar código
+git checkout master
+Crear y cambiar a una nueva rama feature:
+
+bash
+Copiar código
+git checkout -b feature
+Restaurar el archivo main.py:
+
+bash
+Copiar código
+git checkout -- main.py
+En resumen, git checkout es una herramienta versátil que se utiliza principalmente para cambiar entre ramas y restaurar archivos.
+
+
+
+
+Editar commit antes de publicarse:
+
+cd scripts/
+touch auto-update.py
+touch gather-information.sh
+ls -l
+
+git add auto-update.py
+git commit -m 'Add two new scripts'
+
+git add gather-information.sh
+git commit --amend
+
+
+
+Rollbacks:
+
+git revert HEAD
+
+git log -p -2
+
+
+
+
+Identifying commits:
+
+git log -1
+
+git show 30e70712882267ca2dd749acfa02ea3aacfd0b24
+
+git revert 30e7
+
+
+
+
+
