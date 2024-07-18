@@ -35,6 +35,7 @@ git commit -m "Add hello_world.py script"
 # Actualizar el repositorio en la rama DBA en GitHub
 git push origin DBA
 ```
+git status
 
 Esto debería añadir el archivo `hello_world.py` a tu repositorio en GitHub bajo la rama `DBA`.
 
